@@ -1,0 +1,37 @@
+Opening file: '../data/chaoskey3-2GB.bin'
+Error: failure to initialize memory for bsymbols
+Error reading file.
+Usage is: ./non_iid_main <file_name> <bits_per_word> <-i|-c> <-a|-t> [-v]
+
+	 <file_name>: Must be relative path to a binary file with at least 1 million entries (words).
+	 <bits_per_word>: Must be between 1-8, inclusive.
+	 <-i|-c>: '-i' for initial entropy estimate, '-c' for conditioned sequential dataset entropy estimate.
+	 <-a|-t>: '-a' tests all bits in bitstring, '-t' truncates bitstring to 1000000 bits.
+	          ('-a' is forced if bits_per_word is 1)
+	 -v: Optional verbosity flag for more output.
+
+	 Samples are assumed to be packed into 8-bit values, where the rightmost 'bits_per_word'
+	 bits constitute the sample. For example, if 'bits_per_word' is 3, then the four samples
+	 0x6F, 0xA4, 0x39, 0x58, would be truncated to 0x07, 0x04, 0x01, 0x00.
+
+	 If there are less than 2^{bits_per_word} symbols observed in the data, the alphabet is
+	 mapped down to 0, 1, 2, ..., alph_size-1 in ascending numeric order of the symbols.
+	 For example, given 'bits_per_word' is 4, if the data consists of the three unique symbols
+	 0x7, 0x3, 0xA, they would be mapped down to 0x3 => 0x0, 0x7 => 0x1, 0xA => 0x2.
+
+	 -i: Initial Entropy Estimate (Section 3.1.3)
+
+		 Computes the initial entropy estimate H_I as described in Section 3.1.3
+		 (not accounting for H_submitter) using the ten entropy estimators specified in
+		 Section 6.3.  If 'bits_per_word' is greater than 1, the samples are also
+		 converted to bitstrings. Two entropy estimates are computed: H_original and H_bitstring.
+		 Note that if 'bits_per_word' is 1, only H_bitstring is computed.
+		 Returns min(H_original, bits_per_word X H_bitstring). The initial entropy
+		 estimate H_I = min(H_submitter, H_original, bits_per_word X H_bitstring).
+
+	 -c: Conditioned Sequential Dataset Entropy Estimate (Section 3.1.5.2)
+
+		 Computes the entropy estimate per bit h' for the conditioned sequential dataset if the
+		 conditioning function is non-vetted. The samples are converted to a bitstring.
+		 Returns h' = min(H_bitstring).
+

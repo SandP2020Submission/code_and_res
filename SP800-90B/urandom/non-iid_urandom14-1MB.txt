@@ -1,0 +1,38 @@
+Opening file: '../data/urandom14-1MB.bin'
+Number of Symbols: 1048576
+Number of Binary Symbols: 1000000
+
+Symbol alphabet consists of 256 unique symbols
+
+Running non-IID tests...
+
+Running Most Common Value Estimate...
+	Most Common Value Estimate (bit string) = 0.995468 / 1 bit(s)
+	Most Common Value Estimate = 7.883979 / 8 bit(s)
+
+Running Entropic Statistic Estimates (bit strings only)...
+	Collision Test Estimate (bit string) = 0.928781 / 1 bit(s)
+	Markov Test Estimate (bit string) = 0.998253 / 1 bit(s)
+	Compression Test Estimate (bit string) = 0.753724 / 1 bit(s)
+
+Running Tuple Estimates...
+	T-Tuple Test Estimate (bit string) = 0.938051 / 1 bit(s)
+	T-Tuple Test Estimate = 7.368521 / 8 bit(s)
+	LRS Test Estimate (bit string) = 0.977841 / 1 bit(s)
+	LRS Test Estimate = 7.934982 / 8 bit(s)
+
+Running Predictor Estimates...
+	Multi Most Common in Window (MultiMCW) Prediction Test Estimate (bit string) = 0.992608 / 1 bit(s)
+	Multi Most Common in Window (MultiMCW) Prediction Test Estimate = 7.968179 / 8 bit(s)
+	Lag Prediction Test Estimate (bit string) = 0.996601 / 1 bit(s)
+	Lag Prediction Test Estimate = 7.946636 / 8 bit(s)
+	Multi Markov Model with Counting (MultiMMC) Prediction Test Estimate (bit string) = 0.996746 / 1 bit(s)
+	Multi Markov Model with Counting (MultiMMC) Prediction Test Estimate = 7.951837 / 8 bit(s)
+	LZ78Y Prediction Test Estimate (bit string) = 0.997217 / 1 bit(s)
+	LZ78Y Prediction Test Estimate = 7.951816 / 8 bit(s)
+
+H_original: 7.368521
+H_bitstring: 0.753724
+
+min(H_original, 8 X H_bitstring): 6.029792
+

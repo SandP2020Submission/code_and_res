@@ -1,0 +1,39 @@
+Opening file: '../bin/sigma1MB9_56.bin'
+Number of Symbols: 1048576
+Number of Binary Symbols: 1000000
+
+Symbol alphabet consists of 256 unique symbols
+
+Running non-IID tests...
+
+Running Most Common Value Estimate...
+	Most Common Value Estimate (bit string) = 0.995837 / 1 bit(s)
+	Most Common Value Estimate = 7.904673 / 8 bit(s)
+
+Running Entropic Statistic Estimates (bit strings only)...
+	 *** WARNING: binary search for collision test failed ***
+	Collision Test Estimate (bit string) = 1.000000 / 1 bit(s)
+	Markov Test Estimate (bit string) = 0.998571 / 1 bit(s)
+	Compression Test Estimate (bit string) = 0.525559 / 1 bit(s)
+
+Running Tuple Estimates...
+	T-Tuple Test Estimate (bit string) = 0.354366 / 1 bit(s)
+	T-Tuple Test Estimate = 1.646997 / 8 bit(s)
+	LRS Test Estimate (bit string) = 0.294401 / 1 bit(s)
+	LRS Test Estimate = 2.194014 / 8 bit(s)
+
+Running Predictor Estimates...
+	Multi Most Common in Window (MultiMCW) Prediction Test Estimate (bit string) = 0.905616 / 1 bit(s)
+	Multi Most Common in Window (MultiMCW) Prediction Test Estimate = 8.000000 / 8 bit(s)
+	Lag Prediction Test Estimate (bit string) = 0.784770 / 1 bit(s)
+	Lag Prediction Test Estimate = 8.000000 / 8 bit(s)
+	Multi Markov Model with Counting (MultiMMC) Prediction Test Estimate (bit string) = 0.706235 / 1 bit(s)
+	Multi Markov Model with Counting (MultiMMC) Prediction Test Estimate = 1.071010 / 8 bit(s)
+	LZ78Y Prediction Test Estimate (bit string) = 0.995821 / 1 bit(s)
+	LZ78Y Prediction Test Estimate = 1.071010 / 8 bit(s)
+
+H_original: 1.071010
+H_bitstring: 0.294401
+
+min(H_original, 8 X H_bitstring): 1.071010
+
