@@ -274,12 +274,12 @@ def test4(s):
 	c = [0,0]
 	
 	for i in b:
-		if (i=='0'):
+		if (i is False):
 			c[1] = 0
 			c[0] = c0+1
 			if(c0>34):
 				break;
-		elif (i=='1'):
+		elif (i is True):
 			c[0] = 0
 			c[1] = c1+1
 			if(c1>34):
